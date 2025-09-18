@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import "./todo.css"; // Import CSS file
 
 export default function Todolist() {
-  // Load todos from localStorage (if any), otherwise empty array
+
   let getInitialTodos = () => {
     let savedTodos = localStorage.getItem("todos");
     return savedTodos ? JSON.parse(savedTodos) : [];
@@ -12,7 +12,7 @@ export default function Todolist() {
   let [todos, settodos] = useState(getInitialTodos);
   let [newTOdo, setnewTodo] = useState("");
 
-  // Save todos to localStorage whenever `todos` changes
+ 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -85,5 +85,6 @@ export default function Todolist() {
     </div>
   );
 }
+
 
 
