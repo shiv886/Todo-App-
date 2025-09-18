@@ -1,0 +1,158 @@
+/* ====== General Styling ====== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+}
+
+/* ====== Todo Container ====== */
+.todo-container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+  color: #1e7e34;
+}
+
+.todo-container h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ====== Input & Add Button ====== */
+.todo-input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.todo-input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+.add-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s;
+}
+
+.add-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ====== Todo List ====== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f8f9fa;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+li:hover {
+  background: #eef2ff;
+}
+
+li span {
+  font-size: 1rem;
+  flex-grow: 1;
+  color: #333;
+}
+
+/* ====== Buttons for Each Task ====== */
+.task-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.task-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Delete button */
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+/* Done button */
+.done-btn {
+  background: #28a745;
+  color: white;
+}
+
+.done-btn:hover {
+  background: #1e7e34;
+}
+
+/* ====== Mark All Button ====== */
+.mark-all-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #20c997;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mark-all-btn:hover {
+  background: #17a589;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
